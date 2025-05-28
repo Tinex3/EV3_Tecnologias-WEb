@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Portafolio Artista</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../static/css/styles.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-arrow-right me-2"></i>
+                logo artista
+            </a>
+            <div class="navbar-nav ms-auto">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#tos">T.O.S.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <!-- Introducción -->
+        <section class="gallery-intro">
+            <h2>Mi Colección</h2>
+            <p>Explora mi colección de obras de arte digital creadas con pasión y dedicación. Cada pieza cuenta una historia única.</p>
+        </section>
+
+        <!-- Galería -->
+        <div class="mini-gallery-container">
+            <!-- Fila Superior -->
+            <div class="mini-gallery-row">
+                <div class="mini-artwork-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#artModal" 
+                     onclick="setModalData('Abstracción Oceánica', '../static/img/12-06-2024.png', 'Una representación abstracta de las profundidades del océano, con colores vibrantes y formas fluidas que evocan el movimiento del agua.', '$120')"
+                     data-price="$120">
+                    <img src="../static/img/12-06-2024.png" class="mini-artwork-image" alt="Abstracción Oceánica">
+                </div>
+                <div class="mini-artwork-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#artModal" 
+                     onclick="setModalData('Paisaje Onírico', '../static/img/20-06-2024.png', 'Un paisaje surrealista que transporta al espectador a un mundo de ensueño, donde la realidad se mezcla con la fantasía.', '$150')"
+                     data-price="$150">
+                    <img src="../static/img/20-06-2024.png" class="mini-artwork-image" alt="Paisaje Onírico">
+                </div>
+                <div class="mini-artwork-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#artModal" 
+                     onclick="setModalData('Encuentro en la Costa', '../static/img/bestiesenplaya.png', 'Una escena costera donde dos bestias míticas se encuentran al atardecer, creando una atmósfera mágica y misteriosa.', '$180')"
+                     data-price="$180">
+                    <img src="../static/img/bestiesenplaya.png" class="mini-artwork-image" alt="Encuentro en la Costa">
+                </div>
+                <div class="mini-artwork-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#artModal" 
+                     onclick="setModalData('Composición: Copihue', '../static/img/plantilla_portada_real.png', 'Una composición floral que rinde homenaje al copihue, la flor nacional de Chile, con un estilo moderno y colorido.', '$200')"
+                     data-price="$200">
+                    <img src="../static/img/plantilla_portada_real.png" class="mini-artwork-image" alt="Composición: Copihue">
+                </div>
+            </div>
+            
+            <!-- Fila Inferior -->
+            <div class="mini-gallery-row">
+                <div class="mini-artwork-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#artModal" 
+                     onclick="setModalData('Reflejos Nocturnos', '../static/img/12-06-2024.png', 'Una ciudad bajo la lluvia nocturna, donde los reflejos de las luces crean patrones hipnóticos en las calles mojadas.', '$120')"
+                     data-price="$120">
+                    <img src="../static/img/12-06-2024.png" class="mini-artwork-image" alt="Reflejos Nocturnos">
+                </div>
+                <div class="mini-artwork-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#artModal" 
+                     onclick="setModalData('Retrato Etéreo', '../static/img/20-06-2024.png', 'Un retrato con un estilo etéreo, donde los rasgos se difuminan suavemente creando una sensación de misterio y belleza.', '$150')"
+                     data-price="$150">
+                    <img src="../static/img/20-06-2024.png" class="mini-artwork-image" alt="Retrato Etéreo">
+                </div>
+                <div class="mini-artwork-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#artModal" 
+                     onclick="setModalData('Serenidad Acuática', '../static/img/bestiesenplaya.png', 'Una criatura acuática en su hábitat natural, representada con colores suaves y formas orgánicas que transmiten paz.', '$180')"
+                     data-price="$180">
+                    <img src="../static/img/bestiesenplaya.png" class="mini-artwork-image" alt="Serenidad Acuática">
+                </div>
+                <div class="mini-artwork-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#artModal" 
+                     onclick="setModalData('Flora Digital', '../static/img/plantilla_portada_real.png', 'Una exploración de la flora a través de la visión digital, combinando elementos naturales con efectos geométricos.', '$200')"
+                     data-price="$200">
+                    <img src="../static/img/plantilla_portada_real.png" class="mini-artwork-image" alt="Flora Digital">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal para detalles de obra -->
+    <div class="modal fade" id="artModal" tabindex="-1" aria-labelledby="artModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="artModalLabel">Detalles de la Obra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <img id="modalArtImage" src="" alt="" class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-md-5">
+                            <h3 id="modalArtTitle" class="mb-3"></h3>
+                            <p class="text-muted"><i class="fas fa-user me-2"></i>Artista: Mstry Rain</p>
+                            <hr>
+                            <p id="modalArtDescription" class="artwork-description"></p>
+                            <p id="modalArtDetails" class="text-muted small"></p>
+                            <div class="artwork-price my-4" id="modalArtPrice"></div>
+                            <button class="btn btn-primary btn-purchase w-100 py-2">
+                                <i class="fas fa-shopping-cart me-2"></i>Comprar Obra
+                            </button>
+                            <button class="btn btn-outline-secondary w-100 mt-2 py-2">
+                                <i class="fas fa-envelope me-2"></i>Consultar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <!-- Redes sociales -->
+            <div class="social-row">
+                <div class="social-item">
+                    <i class="fab fa-instagram"></i>
+                    <a href="https://instagram.com/mstry_rain" target="_blank">Instagram</a>
+                </div>
+                <div class="social-item">
+                    <i class="fab fa-tiktok"></i>
+                    <a href="https://tiktok.com/@mstry_rain" target="_blank">TikTok</a>
+                </div>
+                <div class="social-item">
+                    <i class="fab fa-twitter"></i>
+                    <a href="https://x.com/Mstry_Rain" target="_blank">Twitter</a>
+                </div>
+            </div>
+
+            <!-- Contacto -->
+            <div class="contact-row">
+                <div class="social-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:mstry.rain18@gmail.com">mstry.rain18@gmail.com</a>
+                </div>
+                <div class="social-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+56953031416">+56 9 5303 1416</a>
+                </div>
+            </div>
+
+            <!-- Derechos -->
+            <div class="copyright">
+                &copy; 2024 Nombre Artista. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/gallery.js"></script>
+
+</body>
+</html>
