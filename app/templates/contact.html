@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactáctanos - Galería de Arte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="../static/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/contact.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-arrow-right me-2"></i>
+                logo artista
+            </a>
+            <div class="navbar-nav ms-auto">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#tos">T.O.S.</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="hero-section">
+            <h1>contactáctanos</h1>
+        </div>
+
+        <!-- Contact Content -->
+        <div class="row">
+            <!-- Information Section -->
+            <div class="col-md-4">
+                <div class="info-section">
+                    <h3>Información</h3>
+                    
+                    <div class="contact-info">
+                        <h4>email</h4>
+                        <p><a href="mailto:mstry.rain18@gmail.com" class="email-link">mstry.rain18@gmail.com</a></p>
+                    </div>
+
+                    <div class="contact-info">
+                        <h4>horario laboral</h4>
+                        <p>Lunes a Jueves 9am - 6:30pm</p>
+                        <p>Viernes 9am - 5:30pm</p>
+                        <p>Sábado y Domingo - Cerrado</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <h3>envianos un mensaje</h3>
+                    
+                    <!-- Mensaje de éxito -->
+                    <div class="success-message" id="successMessage">
+                        ¡Mensaje enviado exitosamente! Te contactaremos pronto.
+                    </div>
+                    
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="nombre" class="form-control" placeholder="Nombre" required>
+                            <div class="error-message" id="nombreError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="Email" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="asunto" class="form-control" placeholder="Asunto" required>
+                            <div class="error-message" id="asuntoError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="mensaje" class="form-control" rows="6" placeholder="Mensaje" required></textarea>
+                            <div class="error-message" id="mensajeError"></div>
+                        </div>
+                        
+                        <div class="loading" id="loading">Enviando mensaje...</div>
+                        
+                        <button type="submit" class="btn-enviar" id="submitBtn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <!-- Redes sociales -->
+        <div class="social-row">
+            <div class="social-item">
+                <i class="fab fa-instagram"></i>
+                <a href="https://instagram.com/mstry_rain" target="_blank">Instagram</a>
+            </div>
+            <div class="social-item">
+                <i class="fab fa-tiktok"></i>
+                <a href="https://tiktok.com/@mstry_rain" target="_blank">TikTok</a>
+            </div>
+            <div class="social-item">
+                <i class="fab fa-twitter"></i>
+                <a href="https://x.com/Mstry_Rain" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <!-- Derechos -->
+        <div class="copyright">
+            &copy; 2024 Nombre Artista. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/contact.js"></script>
+</body>
+</html>

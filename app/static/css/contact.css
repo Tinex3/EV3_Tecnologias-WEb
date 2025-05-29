@@ -1,0 +1,131 @@
+/* Estilos específicos para la página de contacto */
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.contact-container {
+    background-color: rgba(44, 44, 44, 0.9);
+    border-radius: 1.25rem;
+    margin: 1.875rem 0;
+    padding: 2rem;
+    color: white;
+}
+
+.info-section {
+    background-color: rgba(111, 89, 149, 0.9);
+    border-radius: 0.9375rem;
+    padding: 1.5625rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.info-section h3 {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    background-color: rgba(44, 44, 44, 0.95);
+    padding: 2rem;
+    border-radius: 0.9375rem;
+}
+
+.contact-form h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.form-control {
+    background-color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--light-teal);
+    box-shadow: 0 0 0 0.2rem rgba(141, 211, 199, 0.25);
+}
+
+.btn-enviar {
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+.btn-enviar:hover {
+    background-color: #555;
+}
+
+.contact-info {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-info p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.email-link {
+    color: var(--light-teal);
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+.form-control.error {
+    border-color: #dc3545 !important;
+    background-color: #fff5f5;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    display: none;
+}
+
+.success-message {
+    background-color: #d1edff;
+    color: #0c63e4;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.loading {
+    display: none;
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.btn-enviar:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
