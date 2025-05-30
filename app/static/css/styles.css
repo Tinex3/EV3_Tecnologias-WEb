@@ -60,12 +60,51 @@ body {
     position: relative;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 18.75rem;
-    object-fit: cover;
-    border-radius: 0.625rem;
+/* Carrusel mejorado - Nuevos estilos */
+#artCarousel {
+    height: 300px;
+    background-color: rgba(44, 44, 44, 0.8);
+    border-radius: 10px;
+    perspective: 1000px;
 }
+
+.carousel-inner {
+    height: 100%;
+    overflow: visible;
+}
+
+.carousel-item {
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    will-change: transform;
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    transform: translateZ(0);
+    filter: blur(0);
+    transition: opacity 0.3s ease;
+}
+
+/* Fin de estilos mejorados para carrusel */
 
 .placeholder-image {
     width: 100%;
@@ -335,60 +374,80 @@ footer .copyright {
         flex-direction: column;
         gap: 0.75rem;
     }
+
+    /* Ajustes responsive para el carrusel */
+    #artCarousel {
+        height: 250px;
+    }
 }
 
-/* SOLUCIÓN 4: Estilos generales para el carrusel (recomendado) */
-.carousel-item {
-    height: 300px; /* Define altura del contenedor */
+/* Modal Styles */
+.modal-content {
+    background-color: rgba(44, 44, 44, 0.95);
+    color: white;
+    border-radius: 15px;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.625rem;
+.modal-body {
+    padding: 20px;
+}
+
+#modalArtImage {
+    max-width: 100%;
+    max-height: 70vh;
+    width: auto;
+    height: auto;
     display: block;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+.modal-dialog {
+    max-width: 90%;
 }
 
-body {
-    background: linear-gradient(135deg, var(--primary-purple) 0%, var(--light-teal) 100%);
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* El contenido principal debe crecer para empujar el footer hacia abajo */
+.modal-title {
+    color: var(--light-teal);
+}
+
 .main-content {
     flex: 1;
 }
 
-/* Footer mantiene sus estilos actuales pero se pegará al fondo */
 footer {
     background-color: rgba(141, 211, 199, 0.9);
     color: var(--dark-bg);
     width: 100%;
     padding: 1.5rem 0;
-    margin-top: auto; /* Esto empuja el footer hacia abajo */
+    margin-top: auto;
 }
 
-.logo{
+.logo {
     height: 50px;
     width: 50px;
 }
 
-.IconoArt{
+.IconoArt {
     height: 150px;
     width: 150px;
 }
 
-.doogle{
+.doogle {
     height: 150px;
     width: 150px;
+}
+
+/* Optimización adicional para transiciones suaves */
+.carousel-control-prev,
+.carousel-control-next {
+    transition: opacity 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 0.9;
 }
